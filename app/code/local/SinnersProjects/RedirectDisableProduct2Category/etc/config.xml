@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <SinnersProjects_RedirectDisableProduct2Category>
+      <version>0.1.0</version>
+    </SinnersProjects_RedirectDisableProduct2Category>
+  </modules>
+  <global>
+    <helpers>
+      <redirectdisableproduct2category>
+        <class>SinnersProjects_RedirectDisableProduct2Category_Helper</class>
+      </redirectdisableproduct2category>
+    </helpers>
+    <models>
+	    	<redirectdisableproduct2category>
+                  <class>SinnersProjects_RedirectDisableProduct2Category_Model</class>
+	       </redirectdisableproduct2category>
+        </models>
+  </global>
+  <frontend>
+        <events>
+            <controller_action_predispatch_catalog_product_view>
+                <observers>
+                    <system_controller_action_postdispatch_catalog_product_view>
+                        <type>singleton</type>
+                        <class>redirectdisableproduct2category/observer</class>
+                        <method>catalogProductViewPredispatch</method>
+                    </system_controller_action_postdispatch_catalog_product_view>
+                </observers>
+            </controller_action_predispatch_catalog_product_view>
+        </events>
+    </frontend>
+</config> 
