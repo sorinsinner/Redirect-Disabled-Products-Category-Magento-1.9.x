@@ -13,3 +13,6 @@ If you wish for it to make 301 permanent redirects, you need to replace 302 with
 
 ## How to install?
 Just as any Magento 1.9.x extension.
+
+## Future plans for this extension
+There are none. It's a simple thing meant to do a simple task.
